@@ -314,18 +314,9 @@ void Receiver::reciveS30(QByteArray egd, int exid)
     }
 }
 
-void Receiver::reciveE31(QByteArray egd)
+static QString getRegulator(QByteArray egd)
 {
-    static unsigned char count;
-    if (count != 3) {
-        count += 1;
-        return;
-    } else {
-        count = 0;
-    }
-
-    QString mode = " E31:";
-
+    QString mode = "";
     if ( egd.at(0) & (1 << 0)) {
         mode += " A";
     } else {
@@ -339,6 +330,20 @@ void Receiver::reciveE31(QByteArray egd)
     } else {
         mode += " ";
     }
+    return mode;
+}
+
+void Receiver::reciveE31(QByteArray egd)
+{
+    static unsigned char count;
+    if (count != 3) {
+        count += 1;
+        return;
+    } else {
+        count = 0;
+    }
+
+    QString mode = " E31:" + getRegulator(egd);
 
     bool k52closed = egd.at(1) & (1 << 7);
     bool k41closed = egd.at(1) & (1 << 0);
@@ -376,27 +381,18 @@ void Receiver::reciveE31(QByteArray egd)
         e31Label->setStyleSheet("QLabel {background-color: #00FF00}");
 
     int numberLabel = 0;
-    for (int byte = 0; byte < 2; byte++) {
+    for (int byte = 0; byte < 12; byte++) {
         for (int bit = 0; bit < 8; bit++) {
-            bool res = egd.at(byte) & (1 << bit);
-            if (res)
+            if (egd.at(byte) & (1 << bit))
                 e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
             else
                 e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
             e31FlagLabel[numberLabel]->setText(" " + QString::number(bit) + " ");
             numberLabel++;
         }
-    }
-    for (int byte = 8; byte < 12; byte++) {
-        for (int bit = 0; bit < 8; bit++) {
-            bool res = egd.at(byte) & (1 << bit);
-            if (res)
-                e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
-            else
-                e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
-            e31FlagLabel[numberLabel]->setText(" " + QString::number(bit) + " ");
-            numberLabel++;
-        }
+
+        if (byte == 1)
+            byte = 7; // next will be 8
     }
 }
 
@@ -447,8 +443,7 @@ void Receiver::reciveL31(QByteArray egd)
     int numberLabel = 0;
     for (int byte = 0; byte <4; byte++) {
         for (int bit = 0; bit < 8; bit++) {
-            bool res = egd.at(byte) & (1 << bit);
-            if (res)
+            if (egd.at(byte) & (1 << bit))
                 l31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
             else
                 l31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
@@ -468,21 +463,7 @@ void Receiver::reciveX30(QByteArray egd)
         count = 0;
     }
 
-    QString mode = " X30:";
-
-    if ( egd.at(0) & (1 << 0)) {
-        mode += " A";
-    } else {
-        mode += " M";
-    }
-
-    if ( egd.at(0) & (1 << 5)) {
-        mode += "1";
-    } else if ( egd.at(0) & (1 << 6))  {
-        mode += "2";
-    } else {
-        mode += " ";
-    }
+    QString mode = " X30:" + getRegulator(egd);
 
     bool k52closed = egd.at(1) & (1 << 7);
     bool k41closed = egd.at(1) & (1 << 0);
@@ -531,38 +512,22 @@ void Receiver::reciveX30(QByteArray egd)
         x30Label->setStyleSheet("QLabel {background-color: #00FF00}");
 
     int numberLabel = 0;
-    for (int byte = 0; byte < 2; byte++) {
+    for (int byte = 0; byte < 73; byte++) {
         for (int bit = 0; bit < 8; bit++) {
-            bool res = egd.at(byte) & (1 << bit);
-            if (res)
+            if (egd.at(byte) & (1 << bit))
                 x30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
             else
                 x30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
             x30FlagLabel[numberLabel]->setText(" " + QString::number(bit) + " ");
             numberLabel++;
-        }
-    }
-    for (int byte = 8; byte < 12; byte++) {
-        for (int bit = 0; bit < 8; bit++) {
-            bool res = egd.at(byte) & (1 << bit);
-            if (res)
-                x30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
-            else
-                x30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
-            x30FlagLabel[numberLabel]->setText(" " + QString::number(bit) + " ");
-            numberLabel++;
-        }
-    }
 
-    int byte = 72;
-    for (int bit = 0; bit < 2; bit++) {
-        bool res = egd.at(byte) & (1 << bit);
-        if (res)
-            x30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
-        else
-            x30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
-        x30FlagLabel[numberLabel]->setText(" " + QString::number(bit) + " ");
-        numberLabel++;
-    }
+            if (byte == 72 && bit == 1)
+                break;
+        }
 
+        if (byte == 1)
+            byte = 7; // next will be 8
+        if (byte == 11)
+            byte = 71; // next will be 72
+    }
 }
