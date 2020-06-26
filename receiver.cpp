@@ -111,7 +111,7 @@ Receiver::Receiver(QWidget *parent)
             QLabel *tmpl = new QLabel("  " + QString::number(i / 8) + ":");
             l31FlagLayout->addWidget(tmpl);
         }
-        l31FlagLabel.push_back(new QLabel(QString::number(i % 8)));
+        l31FlagLabel.push_back(new QLabel());
         l31FlagLayout->addWidget(l31FlagLabel[i]);
     }
     l31FlagLayout->addStretch();
@@ -125,7 +125,7 @@ Receiver::Receiver(QWidget *parent)
                 tmpl = new QLabel("  " + QString::number((i+6*8) / 8) + ":");
             e31FlagLayout->addWidget(tmpl);
         }
-        e31FlagLabel.push_back(new QLabel(QString::number(i % 8)));
+        e31FlagLabel.push_back(new QLabel());
         e31FlagLayout->addWidget(e31FlagLabel[i]);
     }
     e31FlagLayout->addStretch();
@@ -141,7 +141,7 @@ Receiver::Receiver(QWidget *parent)
                 tmpl = new QLabel("  " + QString::number((i+66*8) / 8) + ":");
             x30FlagLayout->addWidget(tmpl);
         }
-        x30FlagLabel.push_back(new QLabel(QString::number(i % 8)));
+        x30FlagLabel.push_back(new QLabel());
         x30FlagLayout->addWidget(x30FlagLabel[i]);
     }
     x30FlagLayout->addStretch();
