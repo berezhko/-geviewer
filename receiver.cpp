@@ -164,6 +164,9 @@ Receiver::Receiver(QWidget *parent)
     }
     s30FlagLayout->addStretch();
 
+    g31Cmd.e31.ex2.resize(12);
+    g31Cmd.l31.ex2.resize(5);
+
     setWindowTitle(tr("GE Viewer v1.2"));
     setFixedWidth(1240);
 }
@@ -259,25 +262,28 @@ void Receiver::processPendingDatagrams()
 
 void Receiver::reciveG31(QByteArray egd, int exid)
 {
+    int num;
     if (exid == 0x02) {
-        g31Cmd.e31.ex2.push_back(egd.at(17) & (1 << 1));
-        g31Cmd.e31.ex2.push_back(egd.at(27) & (1 << 6));
-        g31Cmd.e31.ex2.push_back(egd.at(60) & (1 << 3));
-        g31Cmd.e31.ex2.push_back(egd.at(106) & (1 << 5));
-        g31Cmd.e31.ex2.push_back(egd.at(118) & (1 << 3));
-        g31Cmd.e31.ex2.push_back(egd.at(144) & (1 << 0));
-        g31Cmd.e31.ex2.push_back(egd.at(149) & (1 << 2));
-        g31Cmd.e31.ex2.push_back(egd.at(172) & (1 << 4));
-        g31Cmd.e31.ex2.push_back(egd.at(173) & (1 << 7));
-        g31Cmd.e31.ex2.push_back(egd.at(176) & (1 << 3));
-        g31Cmd.e31.ex2.push_back(egd.at(218) & (1 << 3));
-        g31Cmd.e31.ex2.push_back(egd.at(227) & (1 << 2));
+        num = 0;
+        g31Cmd.e31.ex2[num++] = egd.at(17) & (1 << 1);
+        g31Cmd.e31.ex2[num++] = egd.at(27) & (1 << 6);
+        g31Cmd.e31.ex2[num++] = egd.at(60) & (1 << 3);
+        g31Cmd.e31.ex2[num++] = egd.at(106) & (1 << 5);
+        g31Cmd.e31.ex2[num++] = egd.at(118) & (1 << 3);
+        g31Cmd.e31.ex2[num++] = egd.at(144) & (1 << 0);
+        g31Cmd.e31.ex2[num++] = egd.at(149) & (1 << 2);
+        g31Cmd.e31.ex2[num++] = egd.at(172) & (1 << 4);
+        g31Cmd.e31.ex2[num++] = egd.at(173) & (1 << 7);
+        g31Cmd.e31.ex2[num++] = egd.at(176) & (1 << 3);
+        g31Cmd.e31.ex2[num++] = egd.at(218) & (1 << 3);
+        g31Cmd.e31.ex2[num++] = egd.at(227) & (1 << 2);
 
-        g31Cmd.l31.ex2.push_back(egd.at(13) & (1 << 0));
-        g31Cmd.l31.ex2.push_back(egd.at(107) & (1 << 3));
-        g31Cmd.l31.ex2.push_back(egd.at(140) & (1 << 7));
-        g31Cmd.l31.ex2.push_back(egd.at(157) & (1 << 1));
-        g31Cmd.l31.ex2.push_back(egd.at(217) & (1 << 3));
+        num = 0;
+        g31Cmd.l31.ex2[num++] = egd.at(13) & (1 << 0);
+        g31Cmd.l31.ex2[num++] = egd.at(107) & (1 << 3);
+        g31Cmd.l31.ex2[num++] = egd.at(140) & (1 << 7);
+        g31Cmd.l31.ex2[num++] = egd.at(157) & (1 << 1);
+        g31Cmd.l31.ex2[num++] = egd.at(217) & (1 << 3);
     } else if (exid == 0x03) {
         float *tmp = (float *)(egd.constData() + 136);
         g31Cmd.e31.ex3 = *tmp;
@@ -285,8 +291,9 @@ void Receiver::reciveG31(QByteArray egd, int exid)
         tmp = (float *)(egd.constData() + 1316);
         g31Cmd.l31.ex3 = *tmp;
     } else if (exid == 0x05) {
-        g31Cmd.e31.ex5.push_back(egd.at(0) & (1 << 0));
-        g31Cmd.e31.ex5.push_back(egd.at(0) & (1 << 1));
+        num = 0;
+        g31Cmd.e31.ex5[num++] = egd.at(0) & (1 << 0);
+        g31Cmd.e31.ex5[num++] = egd.at(0) & (1 << 1);
     }
 }
 
@@ -468,6 +475,16 @@ void Receiver::reciveL31(QByteArray egd)
             numberLabel++;
         }
     }
+
+    numberLabel = 0;
+    for (bool b: g31Cmd.l31.ex2) {
+        if (b == true)
+            g31l31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
+        else
+            g31l31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
+        numberLabel++;
+    }
+    g31l31FlagLabel[numberLabel]->setText(" SS_REF_OUT: " + QString::number(g31Cmd.l31.ex3));
 }
 
 void Receiver::reciveX30(QByteArray egd)
