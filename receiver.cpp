@@ -147,24 +147,34 @@ Receiver::Receiver(QWidget *parent)
     x30FlagLayout->addStretch();
 
     for (int i = 0; i < 15; i++) {
+        if (i == 12 || i == 14) {
+            g31e31FlagLayout->addWidget(new QLabel(" | "));
+        }
         g31e31FlagLabel.push_back(new QLabel("_"));
         g31e31FlagLayout->addWidget(g31e31FlagLabel[i]);
     }
     g31e31FlagLayout->addStretch();
 
     for (int i = 0; i < 6; i++) {
+        if (i == 5) {
+            g31l31FlagLayout->addWidget(new QLabel(" | "));
+        }
         g31l31FlagLabel.push_back(new QLabel("_"));
         g31l31FlagLayout->addWidget(g31l31FlagLabel[i]);
     }
     g31l31FlagLayout->addStretch();
 
     for (int i = 0; i < 14; i++) {
+        if (i == 8 || i == 13) {
+            s30FlagLayout->addWidget(new QLabel(" | "));
+        }
         s30FlagLabel.push_back(new QLabel("_"));
         s30FlagLayout->addWidget(s30FlagLabel[i]);
     }
     s30FlagLayout->addStretch();
 
     g31Cmd.e31.ex2.resize(12);
+    g31Cmd.e31.ex5.resize(2);
     g31Cmd.l31.ex2.resize(5);
     s30Cmd.x30.ex2.resize(8);
     s30Cmd.x30.ex7.resize(5);
@@ -585,5 +595,5 @@ void Receiver::reciveX30(QByteArray egd)
             s30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
         numberLabel++;
     }
-    g31l31FlagLabel[numberLabel]->setText(" DTGGC_MAX: " + QString::number(s30Cmd.x30.ex2DtggcMax));
+    s30FlagLabel[numberLabel]->setText(" DTGGC_MAX: " + QString::number(s30Cmd.x30.ex2DtggcMax));
 }
