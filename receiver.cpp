@@ -394,6 +394,23 @@ void Receiver::reciveE31(QByteArray egd)
         if (byte == 1)
             byte = 7; // next will be 8
     }
+
+    numberLabel = 0;
+    for (bool b: g31Cmd.e31.ex2) {
+        if (b == true)
+            g31e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
+        else
+            g31e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
+        numberLabel++;
+    }
+    for (bool b: g31Cmd.e31.ex5) {
+        if (b == true)
+            g31e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
+        else
+            g31e31FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
+        numberLabel++;
+    }
+    g31e31FlagLabel[numberLabel]->setText(" DTGGC_MAX: " + QString::number(g31Cmd.e31.ex3));
 }
 
 void Receiver::reciveL31(QByteArray egd)
