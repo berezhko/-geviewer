@@ -166,6 +166,8 @@ Receiver::Receiver(QWidget *parent)
 
     g31Cmd.e31.ex2.resize(12);
     g31Cmd.l31.ex2.resize(5);
+    s30Cmd.x30.ex2.resize(8);
+    s30Cmd.x30.ex7.resize(5);
 
     setWindowTitle(tr("GE Viewer v1.2"));
     setFixedWidth(1240);
@@ -299,25 +301,28 @@ void Receiver::reciveG31(QByteArray egd, int exid)
 
 void Receiver::reciveS30(QByteArray egd, int exid)
 {
+    int num;
     if (exid == 0x02) {
-        s30Cmd.x30.ex2.push_back(egd.at(22) & (1 << 4));
-        s30Cmd.x30.ex2.push_back(egd.at(26) & (1 << 7));
-        s30Cmd.x30.ex2.push_back(egd.at(46) & (1 << 2));
-        s30Cmd.x30.ex2.push_back(egd.at(70) & (1 << 2));
-        s30Cmd.x30.ex2.push_back(egd.at(78) & (1 << 5));
-        s30Cmd.x30.ex2.push_back(egd.at(90) & (1 << 2));
-        s30Cmd.x30.ex2.push_back(egd.at(92) & (1 << 5));
-        s30Cmd.x30.ex2.push_back(egd.at(97) & (1 << 5));
+        num = 0;
+        s30Cmd.x30.ex2[num++] = egd.at(22) & (1 << 4);
+        s30Cmd.x30.ex2[num++] = egd.at(26) & (1 << 7);
+        s30Cmd.x30.ex2[num++] = egd.at(46) & (1 << 2);
+        s30Cmd.x30.ex2[num++] = egd.at(70) & (1 << 2);
+        s30Cmd.x30.ex2[num++] = egd.at(78) & (1 << 5);
+        s30Cmd.x30.ex2[num++] = egd.at(90) & (1 << 2);
+        s30Cmd.x30.ex2[num++] = egd.at(92) & (1 << 5);
+        s30Cmd.x30.ex2[num++] = egd.at(97) & (1 << 5);
 
         float *tmp = (float *)(egd.constData() + 1104);
         s30Cmd.x30.ex2DtggcMax = *tmp;
 
     } else if (exid == 0x07) {
-        s30Cmd.x30.ex7.push_back(egd.at(179) & (1 << 4));
-        s30Cmd.x30.ex7.push_back(egd.at(179) & (1 << 5));
-        s30Cmd.x30.ex7.push_back(egd.at(179) & (1 << 6));
-        s30Cmd.x30.ex7.push_back(egd.at(179) & (1 << 7));
-        s30Cmd.x30.ex7.push_back(egd.at(180) & (1 << 0));
+        num = 0;
+        s30Cmd.x30.ex7[num++] = egd.at(179) & (1 << 4);
+        s30Cmd.x30.ex7[num++] = egd.at(179) & (1 << 5);
+        s30Cmd.x30.ex7[num++] = egd.at(179) & (1 << 6);
+        s30Cmd.x30.ex7[num++] = egd.at(179) & (1 << 7);
+        s30Cmd.x30.ex7[num++] = egd.at(180) & (1 << 0);
     }
 }
 
@@ -564,4 +569,21 @@ void Receiver::reciveX30(QByteArray egd)
         if (byte == 11)
             byte = 71; // next will be 72
     }
+
+    numberLabel = 0;
+    for (bool b: s30Cmd.x30.ex2) {
+        if (b == true)
+            s30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
+        else
+            s30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
+        numberLabel++;
+    }
+    for (bool b: s30Cmd.x30.ex7) {
+        if (b == true)
+            s30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #ff8787}");
+        else
+            s30FlagLabel[numberLabel]->setStyleSheet("QLabel {background-color: #00ff00}");
+        numberLabel++;
+    }
+    g31l31FlagLabel[numberLabel]->setText(" DTGGC_MAX: " + QString::number(s30Cmd.x30.ex2DtggcMax));
 }
