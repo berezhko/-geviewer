@@ -57,8 +57,9 @@
 Receiver::Receiver(QWidget *parent)
     : QWidget(parent)
 {
+    QDate date = QDate::currentDate();
     QTime time = QTime::currentTime();
-    file = new QFile(time.toString("HHmmss") + "_datafile.raw");
+    file = new QFile(date.toString("yyyyMMdd") + "-" + time.toString("HHmmss") + "_datafile.raw");
     file->open(QIODevice::Append);
 
     e31Label = new QLabel(tr("E31"));
@@ -340,9 +341,9 @@ static QString getRegulator(QByteArray egd)
 {
     QString mode = "";
     if ( egd.at(0) & (1 << 0)) {
-        mode += " A";
+        mode += " Auto M";
     } else {
-        mode += " M";
+        mode += " Man M";
     }
 
     if ( egd.at(0) & (1 << 5)) {
