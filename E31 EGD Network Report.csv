@@ -1,0 +1,107 @@
+Signal Name,Point Name,Point Offset,Direction,Data Type,Cimplicity Resource,Scale Enabled,Scale Name,Units,Producer ID,Period (ms),Exchange Name,Exchange Length,Exchange Number,Exchange Revision,Destination,Description
+E31\G31\AUTO_FB,EGD0000.0,0.0,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter is in Auto Regulator
+E31\G31\BAD_4_2OMA,EGD0000.1,0.1,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Analog Input signal is bad
+E31\G31\FLD_GRND,EGD0000.2,0.2,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Field Gnd Detected
+E31\G31\M1_BRIDGE_AL,EGD0000.3,0.3,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,M1 Bridge 1 Alarm
+E31\G31\M1_BRDGE_TRP,EGD0000.4,0.4,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,M1 Bridge 1 Tripped
+E31\G31\C1_CNTL_FB,EGD0000.5,0.5,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,M1 Core is Active Master
+E31\G31\C2_CNTL_FB,EGD0000.6,0.6,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,M2 Core is Active Master
+E31\G31\EXCITER_TRIP,EGD0000.7,0.7,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,The Exciter has tripped
+E31\G31\EX_41DC_CLSD,EGD0001.0,1.0,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,41 Contactor is closed
+E31\G31\EXCTR_ALM,EGD0001.1,1.1,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Alarm is present on the exciter
+E31\G31\Forced_Sig,EGD0001.2,1.2,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,One or more Signals are forced
+E31\G31\SIM_MODE,EGD0001.3,1.3,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter is in simulation mode
+E31\G31\LOE_TRIP,EGD0001.4,1.4,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Trip due to Loss of Excitation
+E31\G31\VHZ_HIGH_FB,EGD0001.5,1.5,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter in VHZ Limit
+E31\G31\OEL_ACUM_FB,EGD0001.6,1.6,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,not used
+E31\G31\FAULTCNTL1,EGD0002.0,2,WRITE,WORD,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Last reported fault code for M1
+E31\G31\FAULTCNTL2,EGD0004.0,4,WRITE,WORD,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Last reported fault code for M2
+E31\G31\FAULTCNTL3,EGD0006.0,6,WRITE,WORD,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Last reported fault code for C
+E31\G31\FB_52G_FB,EGD0001.7,1.7,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,52 device is closed
+E31\G31\FLD_HI_I_TRP,EGD0008.0,8.0,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator High Field Current Trip
+E31\G31\FLD_HITEMP,EGD0008.1,8.1,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Field Temp Hi
+E31\G31\FRCD_TO_MAN,EGD0008.2,8.2,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,EX2100 Forced to Manual Regulator Control
+E31\G31\GEN_HI_V_TRP,EGD0008.3,8.3,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Gen High Voltage Trip
+E31\G31\GEN_VHZ_TRIP,EGD0008.4,8.4,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter Trip on High V/HZ
+E31\G31\GEN_KA,EGD0012.0,12,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator KA
+E31\G31\GN_FREQ,EGD0016.0,16,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator Frequency
+E31\G31\GN_FTEMP,EGD0020.0,20,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator Field Temp
+E31\G31\GN_IFG,EGD0024.0,24,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator Field Current
+E31\G31\GN_PF,EGD0028.0,28,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator Power Factor
+E31\G31\GEN_MVAR,EGD0032.0,32,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator MVARs
+E31\G31\GN_VFLD,EGD0036.0,36,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator Field Voltage
+E31\G31\GEN_KV,EGD0040.0,40,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator KV
+E31\G31\GEN_MW,EGD0044.0,44,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Generator MW
+E31\G31\LOWER_FB,EGD0008.5,8.5,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter is Lowering Voltage
+E31\G31\MAN_UEL_ACT,EGD0008.6,8.6,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Manual Restrictive Limiter is Active
+E31\G31\MANUAL_FB,EGD0008.7,8.7,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter is in Manual Regulator
+E31\G31\NO_EX_FLTS,EGD0009.0,9.0,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter has no Faults
+E31\G31\OEL_ACTV_FB,EGD0009.1,9.1,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Overexcitation Limit is Active
+E31\G31\PSS_ACTV_FB,EGD0009.2,9.2,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,PSS is Active
+E31\G31\PSS_ARMD_FB,EGD0009.3,9.3,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,PSS is Armed
+E31\G31\PTBADRST_FB,EGD0009.4,9.4,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,PT Failure Has Occurred
+E31\G31\RAISE_FB,EGD0009.5,9.5,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter is Raising Voltage
+E31\G31\REFHI_LIMT,EGD0009.6,9.6,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Operator Reference at High Limit
+E31\G31\REFLOW_LIMT,EGD0009.7,9.7,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Operator Reference at Low Limit
+E31\G31\RSTXLTCH_FB,EGD0010.0,10.0,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Control Transfers are Blocked
+E31\G31\SS_MODE_FB,EGD0010.1,10.1,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter is in Static Start Mode
+E31\G31\START_FB,EGD0010.2,10.2,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter has Completed Starting
+E31\G31\STATOR_I_LMT,EGD0010.3,10.3,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Stator Current Limit has been reached
+E31\G31\STOP_FB,EGD0010.4,10.4,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter has Stopped
+E31\G31\UEL_ACTV_FB,EGD0010.5,10.5,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Underexcitation Limiter is Active
+E31\G31\VHZ_ACTV_FB,EGD0010.6,10.6,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,V/HZ Limiter is Active
+E31\G31\ETHCOMLOSTM1,EGD0010.7,10.7,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Ethernet Comm loss to M1
+E31\G31\ETHCOMLOSTM2,EGD0011.0,11.0,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Ethernet Comm loss to M2
+E31\G31\XFR_BAL,EGD0048.0,48,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Difference between Auto and Man Reg
+E31\G31\L30ALM,EGD0011.1,11.1,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter Has Alarm to Mark VI
+E31\G31\L30COM_M6FLT,EGD0011.2,11.2,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Communications to MKVI Bad
+E31\G31\L3ET_COM_P,EGD0011.3,11.3,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter to Mark6 Communications Pulses (Heartbeat)
+E31\G31\EX_RS,EGD0011.4,11.4,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter Ready to Start signal to MKVI
+E31\G31\VFFL,EGD0052.0,52,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter Full Load Field Volts
+E31\G31\AFFL,EGD0056.0,56,WRITE,REAL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Exciter Amps Full Field Load
+E31\G31\CUST_TRIP,EGD0011.5,11.5,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,EX Tripped on 86G Customer Lockout
+E31\G31\L3ESS_COM_P,EGD0011.6,11.6,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Heartbeat to LS2100
+E31\G31\GEN_HI_V_ALM,EGD0011.7,11.7,WRITE,BOOL,E31,Disabled,,,E31,320,G31,60,1,13.0,Broadcast to 192.168.101.255,Gen High Voltage Alarm
+E31\AVR\BUFFER_START,EGD0000.0,0,WRITE,WORD,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,
+E31\AVR\BUFFER_STOP,EGD0002.0,2,WRITE,WORD,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,
+E31\CAPSTAT_HIST,EGD0004.0,4.0,WRITE,BOOL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Capture buffer status for Data Historian
+E31\GN_VMAG,EGD0008.0,8,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen Terminal Voltage (Vmag pu)
+E31\GN_IFG,EGD0012.0,12,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen Field Current    (FldCurrAmps Adc)
+E31\GN_VFLD,EGD0016.0,16,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen Field Voltage    (FvrFeedback Vdc)
+E31\FIRCMD,EGD0020.0,20,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Firing Command (1 = Edo)
+E31\GN_FREQ,EGD0024.0,24,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen Frequency         (Freq_Hz  Hz)
+E31\EX_41DC_CLSD,EGD0004.1,4.1,WRITE,BOOL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,41DC closed (master)
+E31\GN_IMAG,EGD0028.0,28,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen Terminal Current (Imag pu)
+E31\FB_52G_FB,EGD0004.2,4.2,WRITE,BOOL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,52G closed (master)
+E31\CUST_TRIP,EGD0004.3,4.3,WRITE,BOOL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Lockout trip (from customer) (master)
+E31\GEN_MW,EGD0032.0,32,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen Power (megaWatts)
+E31\GEN_MVAR,EGD0036.0,36,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen VARs  (megaVoltsAmpsReactive)
+E31\EXCTR_TRP,EGD0004.4,4.4,WRITE,BOOL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Trip logic (string) active (master)
+E31\AVR\SS_TEST,EGD0006.0,6,WRITE,WORD,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,
+E31\SS_MODE_ENAB,EGD0004.5,4.5,WRITE,BOOL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Static start mode enable from DSPX
+E31\CUSTANALOGIN,EGD0040.0,40,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Customer analog into EPCT 4-20mA or 10V
+E31\FVRSETPOINT,EGD0044.0,44,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Manual or Static Start Ref from ACL
+E31\VARS,EGD0048.0,48,WRITE,REAL,E31,Disabled,,,E31,320,HIST,52,3,2.0,Broadcast to 192.168.101.255,Gen VARs  (VARs  pu)
+G31\DTGGC_MAX,EGD0404.0,404,READ,REAL,,Disabled,TC,XXX,192.168.101.111,480,G31:EX4,1400,4,165.0,Broadcast,Maximum Of Fail Checked Temperature Signals       
+G31\L3TE_COM_P,EGD0064.6,64.6,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,MKVIe to Exciter Communications Pulses (Heartbeat)
+G31\L4EX_AUTO,EGD0092.7,92.7,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Request AVR (AUTO)=1/FVR(MAN)=0 Reg Select        
+G31\L4EX_C1_CNTL,EGD0014.5,14.5,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Select Exciter M1 Control                         
+G31\L4EX_C2_CNTL,EGD0219.6,219.6,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Select Exciter M2 Control                         
+G31\L4EX_MANUAL,EGD0035.3,35.3,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Select Manual Voltage Regulator at Exciter        
+G31\L4EX_PTRES,EGD0107.0,107.0,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Request Reset PT Failure Latch                    
+G31\L4EX_RESET,EGD0073.2,73.2,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Request to Reset Exciter Alarms                   
+G31\L4EX_STP_CMD,EGD0022.0,22.0,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Request To Stop Exciter - Single Shot             
+G31\L4EX_STR_CMD,EGD0182.7,182.7,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Request To Start Exciter - Single Shot            
+G31\L4EX_XFR_RST,EGD0099.0,99.0,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Reset Control Transfer Latch                      
+G31\L4EXSS,EGD0208.5,208.5,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Exciter Enable Static Start                       
+G31\L4PSSARMD,EGD0210.0,210.0,READ,BOOL,,Disabled,,,192.168.101.111,480,G31:EX2,1400,2,165.0,Broadcast,Request PSS Armed (Ready)                         
+G31\L4EX_LOWER,EGD0000.1,0.1,READ,BOOL,,Disabled,,,192.168.101.111,40,G31:EX5,68,5,119.0,Broadcast,Voltage Regulator Lower                           
+G31\L4EX_RAISE,EGD0000.2,0.2,READ,BOOL,,Disabled,,,192.168.101.111,40,G31:EX5,68,5,119.0,Broadcast,Voltage Regulator Raise                           
+L31\EX_REF_OUT,EGD0064.0,64,READ,REAL,L31,Disabled,,,192.168.101.110,50,L31:FDBKS,68,1,10.0,Broadcast,EGD EXCITER REF 1                                 
+L31\E31\L3SSE_COM_P,EGD0002.3,2.3,READ,BOOL,L31,Disabled,,,192.168.101.110,50,L31:FDBKS,68,1,10.0,Broadcast,EGD COMM BETWEEN LCI AND EXC E1 HEARTBEAT         
+UDH\E31\G31\HEALTHY,EGD0000.1,0.1,READ,BOOL,,Disabled,,,,320,E31:LINK,0,0,1.0,NA - Link Health,
+UDH\E31\HIST\HEALTHY,EGD0000.2,0.2,READ,BOOL,,Disabled,,,,320,E31:LINK,0,0,1.0,NA - Link Health,
+UDH\G31\EX4\HEALTHY,EGD0000.3,0.3,READ,BOOL,,Disabled,,,,320,E31:LINK,0,0,1.0,NA - Link Health,
+UDH\G31\EX2\HEALTHY,EGD0000.4,0.4,READ,BOOL,,Disabled,,,,320,E31:LINK,0,0,1.0,NA - Link Health,
+UDH\G31\EX5\HEALTHY,EGD0000.5,0.5,READ,BOOL,,Disabled,,,,320,E31:LINK,0,0,1.0,NA - Link Health,
+UDH\L31\FDBKS\HEALTHY,EGD0000.6,0.6,READ,BOOL,,Disabled,,,,320,E31:LINK,0,0,1.0,NA - Link Health,

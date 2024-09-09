@@ -1,0 +1,98 @@
+Signal Name,Point Name,Point Offset,Direction,Data Type,Cimplicity Resource,Scale Enabled,Scale Name,Units,Producer ID,Period (ms),Exchange Name,Exchange Length,Exchange Number,Exchange Revision,Destination,Description
+X30\S30\AUTO_FB,EGD0000.0,0.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter is in Auto Regulator
+X30\S30\BAD_4_2OMA,EGD0000.1,0.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Analog Input signal is bad
+X30\S30\FLD_GRND,EGD0000.2,0.2,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Field Gnd Detected
+X30\S30\M1_BRIDGE_AL,EGD0000.3,0.3,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,M1 Bridge 1 Alarm
+X30\S30\M1_BRDGE_TRP,EGD0000.4,0.4,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,M1 Bridge 1 Tripped
+X30\S30\C1_CNTL_FB,EGD0000.5,0.5,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,M1 Core is Active Master
+X30\S30\C2_CNTL_FB,EGD0000.6,0.6,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,M2 Core is Active Master
+X30\S30\EXCITER_TRIP,EGD0000.7,0.7,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,The Exciter has tripped
+X30\S30\EX_41AC_CLSD,EGD0001.0,1.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,41 Contactor is closed
+X30\S30\EX_41DC_CLSD,EGD0001.1,1.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,41 Contactor is closed
+X30\S30\EXCTR_ALM,EGD0001.2,1.2,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Alarm is present on the exciter
+X30\S30\FAULTCNTL1,EGD0002.0,2,WRITE,WORD,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Last reported fault code for M1
+X30\S30\FAULTCNTL2,EGD0004.0,4,WRITE,WORD,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Last reported fault code for M2
+X30\S30\FAULTCNTL3,EGD0006.0,6,WRITE,WORD,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Last reported fault code for C
+X30\S30\FB_52G_FB,EGD0001.3,1.3,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,52 device is closed
+X30\S30\FLD_HI_I_TRP,EGD0001.4,1.4,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator High Field Current Trip
+X30\S30\FLD_HITEMP,EGD0001.5,1.5,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Field Temp Hi
+X30\S30\FRCD_TO_MAN,EGD0001.6,1.6,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,EX2100 Forced to Manual Regulator Control
+X30\S30\GEN_HI_V_TRP,EGD0001.7,1.7,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Gen High Voltage Trip
+X30\S30\GEN_VHZ_TRIP,EGD0008.0,8.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter Trip on High V/HZ
+X30\S30\GEN_KA,EGD0012.0,12,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator KA
+X30\S30\GN_FREQ,EGD0016.0,16,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator Frequency
+X30\S30\GN_FTEMP,EGD0020.0,20,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator Field Temp
+X30\S30\GN_PF,EGD0024.0,24,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator Power Factor
+X30\S30\GEN_MVAR,EGD0028.0,28,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator MVARs
+X30\S30\GN_VFLD,EGD0032.0,32,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator Field Voltage
+X30\S30\GEN_KV,EGD0036.0,36,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator KV
+X30\S30\GEN_MW,EGD0040.0,40,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Generator MW
+X30\S30\LOWER_FB,EGD0008.1,8.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter is Lowering Voltage
+X30\S30\MAN_UEL_ACT,EGD0008.2,8.2,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Manual Restrictive Limiter is Active
+X30\S30\MANUAL_FB,EGD0008.3,8.3,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter is in Manual Regulator
+X30\S30\NO_EX_FLTS,EGD0008.4,8.4,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter has no Faults
+X30\S30\OEL_ACTV_FB,EGD0008.5,8.5,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Overexcitation Limit is Active
+X30\S30\OEL_ACUM_FB,EGD0008.6,8.6,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,not used
+X30\S30\PSS_ACTV_FB,EGD0008.7,8.7,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,PSS is Active
+X30\S30\PSS_ARMD_FB,EGD0009.0,9.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,PSS is Armed
+X30\S30\PTBADRST_FB,EGD0009.1,9.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,PT Failure Has Occurred
+X30\S30\RAISE_FB,EGD0009.2,9.2,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter is Raising Voltage
+X30\S30\REFHI_LIMT,EGD0009.3,9.3,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Operator Reference at High Limit
+X30\S30\REFLOW_LIMT,EGD0009.4,9.4,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Operator Reference at Low Limit
+X30\S30\RSTXLTCH_FB,EGD0009.5,9.5,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Control Transfers are Blocked
+X30\S30\START_FB,EGD0009.6,9.6,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter has Completed Starting
+X30\S30\STATOR_I_LMT,EGD0009.7,9.7,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Stator Current Limit has been reached
+X30\S30\STOP_FB,EGD0010.0,10.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter has Stopped
+X30\S30\UEL_ACTV_FB,EGD0010.1,10.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Underexcitation Limiter is Active
+X30\S30\VHZ_ACTV_FB,EGD0010.2,10.2,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,V/HZ Limiter is Active
+X30\S30\VFFL,EGD0044.0,44,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter Full Load Field Volts
+X30\S30\AFFL,EGD0048.0,48,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter Amps Full Field Load
+X30\S30\CUST_TRIP,EGD0010.3,10.3,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,EX Tripped on 86G Customer Lockout
+X30\S30\ETHCOMLOSTM1,EGD0010.4,10.4,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Ethernet Comm loss to M1
+X30\S30\ETHCOMLOSTM2,EGD0010.5,10.5,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Ethernet Comm loss to M2
+X30\S30\XFR_BAL,EGD0052.0,52,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Difference between Auto and Man Reg
+X30\S30\L30ALM,EGD0010.6,10.6,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter Has Alarm to Mark VI
+X30\S30\L30COM_M6FLT,EGD0010.7,10.7,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Communications to MKVI Bad
+X30\S30\L3ET_COM_P,EGD0011.0,11.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter to Mark6 Communications Pulses (Heartbeat)
+X30\S30\EX_RS,EGD0011.1,11.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Exciter Ready to Start signal to MKVI
+X30\S30\REGEXCURR,EGD0056.0,56,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Rotating Exciter Field Current Feedback
+X30\S30\REGEXVOLT,EGD0060.0,60,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Rotating Exciter Field Voltage Feedback
+X30\S30\Forced_Sig,EGD0011.2,11.2,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,One or more Signals are forced
+X30\S30\AFFLE,EGD0064.0,64,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Full Load Rotating Exciter Field Current 
+X30\S30\VFFLE,EGD0068.0,68,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Full Load Rotating Exciter Field Voltage
+X30\S30\ROT_GND_AL,EGD0011.3,11.3,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,3rd Party Rotating Ground Fault Detector Alarm
+X30\S30\ROT_DIODE_FL,EGD0011.4,11.4,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Rotating Diode Fault
+X30\S30\ROT_GND_MALF,EGD0011.5,11.5,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,3rd Party Rotating Ground Fault Det. Malfunction
+X30\S30\ROT_DIO_MALF,EGD0011.6,11.6,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Rotating Diode Detector Malfunction
+X30\S30\GEN_HI_V_ALM,EGD0011.7,11.7,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Gen High Voltage Alarm
+X30\GN_IFG,EGD0080.0,80,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Gen Field Current    (FldCurrAmps Adc)
+X30\S30\SW_DIODE_FL,EGD0072.0,72.0,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,Software Rotating Diode Fault
+X30\S30\ANA_GND_AL,EGD0072.1,72.1,WRITE,BOOL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,3rd Party Ground Fault Detector Analog Alarm
+X30\S30\ANA_GND_SIG,EGD0076.0,76,WRITE,REAL,X30,Disabled,,,X30,320,S30,84,1,12.1,Broadcast to 192.168.101.255,
+vm1\s0\EBI001_SO_W1,EGD0000.0,0,WRITE,WORD,X30,Disabled,,,X30,1000,VMAX1,12,4,1.1,Directed to 192.168.101.218,
+vm1\s0\EBI001_SO_W2,EGD0002.0,2,WRITE,WORD,X30,Disabled,,,X30,1000,VMAX1,12,4,1.1,Directed to 192.168.101.218,
+vm1\s1\ALG320_AO_1,EGD0004.0,4,WRITE,WORD,X30,Disabled,,,X30,1000,VMAX1,12,4,1.1,Directed to 192.168.101.218,
+vm1\s1\ALG320_AO_2,EGD0006.0,6,WRITE,WORD,X30,Disabled,,,X30,1000,VMAX1,12,4,1.1,Directed to 192.168.101.218,
+vm1\s1\ALG320_AO_3,EGD0008.0,8,WRITE,WORD,X30,Disabled,,,X30,1000,VMAX1,12,4,1.1,Directed to 192.168.101.218,
+vm1\s1\ALG320_AO_4,EGD0010.0,10,WRITE,WORD,X30,Disabled,,,X30,1000,VMAX1,12,4,1.1,Directed to 192.168.101.218,
+S30\DTGGC_MAX,EGD1104.0,1104,READ,REAL,,Disabled,TC,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Cold Gas RTD Max Value                            
+S30\L3TE_COM_P,EGD0090.2,90.2,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,MKVIe to Exciter Communications Pulses (Heartbeat)
+S30\L4EX_C1_CNTL,EGD0092.5,92.5,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Select EX2K Main Core in Ctrl (Normal Operation)  
+S30\L4EX_C2_CNTL,EGD0046.2,46.2,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Select EX2K Backup Core in Control                
+S30\L4EX_MANUAL,EGD0070.2,70.2,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Select Manual Voltage Regulator at EX2K           
+S30\L4EX_PTRES,EGD0022.4,22.4,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Request Reset PT Failure Latch                    
+S30\L4EX_RESET,EGD0026.7,26.7,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Request to Reset Exciter Alarms                   
+S30\L4EX_XFR_RST,EGD0097.5,97.5,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Reset Control Transfer Latch                      
+S30\L4PSSARMD,EGD0078.5,78.5,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX2,1400,2,50.0,Broadcast,Request PSS Armed (Ready)                         
+S30\L4EX_AUTO,EGD0179.4,179.4,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX7,208,7,13.3,Broadcast,Request AVR (AUTO)=1/FVR(MAN)=0 Reg Select        
+S30\L4EX_LOWER,EGD0179.5,179.5,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX7,208,7,13.3,Broadcast,Voltage Regulator Lower                           
+S30\L4EX_RAISE,EGD0179.6,179.6,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX7,208,7,13.3,Broadcast,Voltage Regulator Raise                           
+S30\L4EX_STP_CMD,EGD0179.7,179.7,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX7,208,7,13.3,Broadcast,Request to Stop EX2K-Single Shot                  
+S30\L4EX_STR_CMD,EGD0180.0,180.0,READ,BOOL,,Disabled,,,192.168.101.211,40,S30:EX7,208,7,13.3,Broadcast,Request to Start EX2K-Single Shot                 
+vm1\s0\EBI001_SI_W1,EGD0000.0,0,READ,WORD,,Disabled,,,192.168.101.218,1000,VMAX1:EXCH1,4,1,1.1,Broadcast,
+vm1\s0\EBI001_SI_W2,EGD0002.0,2,READ,WORD,,Disabled,,,192.168.101.218,1000,VMAX1:EXCH1,4,1,1.1,Broadcast,
+UDH\X30\S30\HEALTHY,EGD0000.1,0.1,READ,BOOL,,Disabled,,,,320,X30:LINK,0,0,1.0,NA - Link Health,
+UDH\X30\VMAX1\HEALTHY,EGD0000.2,0.2,READ,BOOL,,Disabled,,,,320,X30:LINK,0,0,1.0,NA - Link Health,
+UDH\S30\EX2\HEALTHY,EGD0000.3,0.3,READ,BOOL,,Disabled,,,,320,X30:LINK,0,0,1.0,NA - Link Health,
+UDH\S30\EX7\HEALTHY,EGD0000.4,0.4,READ,BOOL,,Disabled,,,,320,X30:LINK,0,0,1.0,NA - Link Health,
+UDH\VMAX1\EXCH1\HEALTHY,EGD0000.5,0.5,READ,BOOL,,Disabled,,,,320,X30:LINK,0,0,1.0,NA - Link Health,
